@@ -13,7 +13,7 @@ export default function DashboardPage() {
     const getAccessToken = async () => {
       try {
         const retrievedAccessToken = await getAccessTokenSilently({
-          audience: 'https://booklist/api',
+          audience: process.env.REACT_APP_AUTH0_AUDIENCE,
           scope: 'read:current_user',
         });
         saveAuthToken(retrievedAccessToken);
@@ -42,9 +42,9 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid gap-x-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-6">
-        {books.map((book) => (
+        {/* {books.map((book) => (
           <Book book={book} key={book.book_id} />
-        ))}
+        ))} */}
       </div>
     </section>
   );
