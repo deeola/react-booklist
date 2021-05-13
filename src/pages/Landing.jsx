@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
 
 export default function LandingPage() {
   return (
-    <section className="bg-gray-100 p-10">
+    <div className="sm:grid grid-cols-layout">
+      <Header />
       <h1>Landing Page</h1>
       <h2>Welcome to the BookLists App</h2>
-    </section>
+    </div>
   );
 }
