@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "./LoginButton";
-import LogoutButton from "./LogoutButton";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 
 export default function Header() {
   const { isAuthenticated } = useAuth0();
 
   const [toggle, setToggle] = useState(false);
-  const [searchValue, setSearchValue] = useState("Search");
+  const [searchValue, setSearchValue] = useState('Search');
 
   let homeButton = (
     <li className="p-1 focus:bg-booklistBlue-dark">
@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="col-span-2 flex justify-between pt-5 pb-4 px-2 z-30 relative bg-white">
+      <div className="col-span-2 flex justify-between pt-5 pb-4 px-2 z-30 relative bg-white sm:col-start-2 sm:col-span-1">
         <div className="flex items-center">
           <button
             type="button"
@@ -63,17 +63,18 @@ export default function Header() {
             />
           </svg>
           <form action="/" method="GET">
-            <label htmlFor="search" />
-            <input
-              className="text-lg text-booklistBlue-dark focus:outline-none"
-              onChange={(e) => {
-                setSearchValue(e.target.value);
-              }}
-              type="text"
-              name="search"
-              id="search"
-              value={searchValue}
-            />
+            <label htmlFor="search">
+              <input
+                className="text-lg text-booklistBlue-dark focus:outline-none"
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                }}
+                type="text"
+                name="search"
+                id="search"
+                value={searchValue}
+              />
+            </label>
           </form>
         </div>
         <div className="flex min-w-max z-10">
@@ -107,7 +108,7 @@ export default function Header() {
           </svg>
         </div>
       </div>
-      <header className="col-start-1 hidden sm:inline bg-booklistBlue">
+      <header className="col-start-1 row-start-1 row-span-2 hidden sm:inline bg-booklistBlue min-h-screen">
         <nav className="m-2 text-white text-lg font-semibold">
           <ul>
             {homeButton}
@@ -120,7 +121,7 @@ export default function Header() {
       <header
         className={`
         col-start-1 absolute top-16 sm:hidden w-screen bg-booklistBlue transform transition z-20
-          ${!toggle ? "-translate-y-full transparent" : "translate-y-0"}
+          ${!toggle ? '-translate-y-full transparent' : 'translate-y-0'}
         `}
       >
         <nav className="m-2 text-white text-lg font-semibold text-center">

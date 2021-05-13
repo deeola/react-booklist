@@ -1,6 +1,6 @@
-import React from "react";
-import bookImg from "../images/book.png";
-import bookmark from "../images/bookmark-icon.png";
+import React from 'react';
+import bookImg from '../images/book.png';
+import bookmark from '../images/bookmark-icon.png';
 
 export default function Book({ book }) {
   return (
