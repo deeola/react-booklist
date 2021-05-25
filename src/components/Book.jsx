@@ -10,8 +10,11 @@ export default function Book({ book }) {
       </div>
       <h3 className="text-gray-900 font-extrabold mt-3">{book.title}</h3>
       <h4 className="text-gray-600 mt-2">{book.author}</h4>
-      <button type="button" className="bg-booklistRed text-white py-1 px-3 rounded-3xl font-semibold mt-3.5 mb-10 shadow-md hover:bg-booklistRed-light hover:-translate-y-0.5 transform transition focus:outline-none focus:ring focus:ring-offset-2 focus:ring-booklistRed focus:ring-opacity-50 active:bg-booklistRed-dark">
-        {book.genre}
+      <button
+        type="button"
+        className="bg-booklistRed text-white py-1 px-3 rounded-3xl font-semibold mt-3.5 mb-10 shadow-md hover:bg-booklistRed-light hover:-translate-y-0.5 transform transition focus:outline-none focus:ring focus:ring-offset-2 focus:ring-booklistRed focus:ring-opacity-50 active:bg-booklistRed-dark"
+      >
+        Genre
       </button>
       <div className="flex items-center justify-between w-52 font-bold">
         <img className="h-4" src={bookmark} alt="bookmark icon" />

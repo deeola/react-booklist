@@ -10,8 +10,12 @@ const LogoutButton = () => {
 
   return (
     isAuthenticated && (
-      <li className="mr-5">
-        <button type="button" onClick={() => logout({ returnTo: window.location.origin })}>
+      <li className="p-1 focus:bg-booklistBlue-dark text-center sm:text-left">
+        <button
+          className="font-semibold"
+          type="button"
+          onClick={() => logout({ returnTo: window.location.origin })}
+        >
           Log Out
         </button>
       </li>
