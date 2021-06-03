@@ -19,7 +19,7 @@ module.exports = {
         layout: '250px auto',
       },
       gridTemplateRows: {
-        layout: '10% auto',
+        layout: '75px auto',
       },
     },
   },
